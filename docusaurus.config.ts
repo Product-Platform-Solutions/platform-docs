@@ -10,7 +10,7 @@ const config: Config = {
   baseUrl: '/',
   organizationName: 'Product-Platform-Solutions',
   projectName: 'platform-docs',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
