@@ -1,19 +1,24 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+github:
+  label: GitHub
+keycloak:
+  label: Keycloak
+setup:
+  label: Setup
+aws:
+  label: AWS
+traefik:
+  label: Traefik
+https:
+  label: HTTPS
+react:
+  label: React
+auto-tracker:
+  label: Auto Tracker
+n8n:
+  label: n8n
+groq:
+  label: Groq
+github-actions:
+  label: GitHub Actions
+automation:
+  label: Automation

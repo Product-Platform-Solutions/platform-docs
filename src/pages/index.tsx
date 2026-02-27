@@ -10,7 +10,7 @@ function HomepageHeader() {
       <h1>{siteConfig.title}</h1>
       <p style={{fontSize: '1.2rem'}}>{siteConfig.tagline}</p>
       <div style={{marginTop: '2rem', display: 'flex', gap: '1rem', justifyContent: 'center'}}>
-        <Link className="button button--primary button--lg" to="/docs/00-project-overview/vision-and-goals">
+        <Link className="button button--primary button--lg" to="/docs/00-project-overview/vision">
           📖 Documentation
         </Link>
         <Link className="button button--secondary button--lg" to="/blog">

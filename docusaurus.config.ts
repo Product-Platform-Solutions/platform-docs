@@ -11,7 +11,7 @@ const config: Config = {
   organizationName: 'Product-Platform-Solutions',
   projectName: 'platform-docs',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: { hooks: { onBrokenMarkdownLinks: 'warn' } },
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
