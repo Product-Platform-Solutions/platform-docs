@@ -22,3 +22,21 @@ github-actions:
   label: GitHub Actions
 automation:
   label: Automation
+doc-engine:
+  label: Doc Engine
+journal:
+  label: Journal
+incident:
+  label: Incident
+iam-platform:
+  label: IAM Platform
+ai-debug-agent:
+  label: AI Debug Agent
+platform-docs:
+  label: Platform Docs
+mfa:
+  label: MFA
+scim:
+  label: SCIM
+ldap:
+  label: LDAP
