@@ -1,15 +1,13 @@
 ---
 title: Changelog for platform-docs (2026-03-01)
 date: 2026-03-01
-tags: 
-  - changelog
-  - platform-docs
+tags: [changelog, platform-docs]
 
-Updated server IP address for improved connectivity. 
+Updated platform-docs with server IP change on the develop branch.
 
-The following changes have been made:
-### chore
-* Updated server IP to 3.26.241.107 
+### Changes
+#### chore
+* Updated server IP to 3.26.241.107
 
 ---
-Note: No new features, fixes, or documentation updates were included in this release.
+Note: There are no new features, fixes, or documentation changes in this update.
