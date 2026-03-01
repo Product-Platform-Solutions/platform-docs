@@ -4,19 +4,16 @@ date: 2026-03-01
 tags: [changelog, platform-docs]
 ---
 
-Updated documentation for the develop branch of platform-docs as of 2026-03-01.
+Updated documentation for the develop branch of platform-docs. 
 
-## Changes
+The following changes have been made:
 ### feat
-* No new features in this update
-
+* None
 ### fix
-* No fixes in this update
-
+* None
 ### docs
 * Updated changelog for platform-docs develop branch
-
 ### chore
-* No miscellaneous changes in this update 
+* None 
 
 Commit pushed by Ananga-M-Chatterjee.
