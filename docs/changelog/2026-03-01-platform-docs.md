@@ -4,18 +4,17 @@ date: 2026-03-01
 tags: [changelog, platform-docs]
 ---
 
-Updated documentation for the development branch of platform-docs as of 2026-03-01.
+Updated platform-docs develop branch with documentation improvements.
 
-## Changes
+### Changes
+#### feat
+None
 
-### feat
-* No new features added.
+#### fix
+None
 
-### fix
-* No bug fixes.
+#### docs
+* Updated changelog for platform-docs develop branch
 
-### docs
-* Updated changelog for platform-docs develop branch.
-
-### chore
-* No miscellaneous changes.
+#### chore
+None
