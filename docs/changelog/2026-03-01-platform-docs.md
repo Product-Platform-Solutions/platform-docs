@@ -1,13 +1,12 @@
 ---
-title: 2026-03-01 Changelog
+title: Changelog for platform-docs (2026-03-01)
 date: 2026-03-01
 tags: [changelog, platform-docs]
 ---
 
-Updated documentation for the develop branch of platform-docs on 2026-03-01.
+Updated platform-docs with latest changelog information.
 
 ### Changes
-
 #### feat
 None
 
@@ -15,7 +14,7 @@ None
 None
 
 #### docs
-* Updated changelog for platform-docs develop branch
+* Updated changelog with latest information for platform-docs
 
 #### chore
 None
