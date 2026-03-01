@@ -1,22 +1,20 @@
 ---
-title: Changelog for platform-docs
+title: 2026-03-01 Changelog
 date: 2026-03-01
 tags: [changelog, platform-docs]
 ---
 
-Updated platform-docs with new documentation features.
+Updated platform-docs develop branch with documentation improvements.
 
-### Changes
-#### feat
-* None
+The following changes have been made:
+### Feat
+* No new features added
 
-#### fix
-* None
+### Fix
+* No fixes applied
 
-#### docs
-* Added changelog entry for platform-docs develop branch
+### Docs
+* Updated changelog to reflect latest developments in the doc-engine
 
-#### chore
-* Updated frontmatter for develop branch documentation 
-
-Commit pushed by Ananga-M-Chatterjee.
+### Chore
+* No miscellaneous changes made
