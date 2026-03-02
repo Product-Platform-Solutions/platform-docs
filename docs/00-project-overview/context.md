@@ -13,16 +13,16 @@ Ananga M Chatterjee — building a complete open source enterprise technology ec
 
 ## Server
 - AWS EC2 t3.micro
-- IP: 3.26.241.107
-- SSH: ssh -i ~/Downloads/iam-platform-key.pem ubuntu@3.26.241.107
+- IP: 15.134.72.92
+- SSH: ssh -i ~/Downloads/iam-platform-key.pem ubuntu@15.134.72.92
 - OS: Ubuntu 24.04
 
 ## Live Services
-- React App: https://app.3.26.241.107.sslip.io
-- Keycloak: https://keycloak.3.26.241.107.sslip.io
-- n8n: https://n8n.3.26.241.107.sslip.io
-- Docs: https://docs.3.26.241.107.sslip.io
-- Auto-tracker API: http://3.26.241.107:3001
+- React App: https://app.15.134.72.92.sslip.io
+- Keycloak: https://keycloak.15.134.72.92.sslip.io
+- n8n: https://n8n.15.134.72.92.sslip.io
+- Docs: https://docs.15.134.72.92.sslip.io
+- Auto-tracker API: http://15.134.72.92:3001
 
 ## PM2 Services
 - auto-tracker-api (port 3001)
@@ -97,6 +97,6 @@ Ananga M Chatterjee — building a complete open source enterprise technology ec
 
 ## How to Resume
 At start of next session, fetch these 3 URLs:
-- https://docs.3.26.241.107.sslip.io/docs/00-project-overview/context
-- https://docs.3.26.241.107.sslip.io/docs/00-project-overview/vision
-- https://docs.3.26.241.107.sslip.io/docs/00-project-overview/roadmap
+- https://docs.15.134.72.92.sslip.io/docs/00-project-overview/context
+- https://docs.15.134.72.92.sslip.io/docs/00-project-overview/vision
+- https://docs.15.134.72.92.sslip.io/docs/00-project-overview/roadmap
