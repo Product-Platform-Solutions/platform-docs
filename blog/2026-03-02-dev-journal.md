@@ -1,31 +1,35 @@
 ---
 slug: dev-journal-2026-03-02
-title: "Day 8: Doc Engine Integration"
+title: "Day 9: Documenting Intelligence"
 authors: [ananga]
 tags: [doc-engine, github, automation]
 ---
 
-Integrated the doc-engine with our existing roadmap and Confluence mirror, tackling a plethora of technical hurdles along the way.
+Integrated the intelligence pipeline with our documentation engine, streamlining the content creation process.
 
 <!-- truncate -->
 
 ## What We Did
 
-Integrated the doc-engine with our existing roadmap and Confluence mirror, tackling a plethora of technical hurdles along the way.
+Today was all about refining our documentation engine to better support the platform's growth. The goal was to create a seamless experience for contributors and users alike by integrating the intelligence pipeline.
 
 ### Accomplished
-- Successfully set up the intelligence pipeline for automated documentation updates
-- Implemented roadmap sync to ensure seamless integration with our project planning
-- Configured a full Confluence mirror for real-time document reflection
+- Successfully integrated the intelligence pipeline with the doc-engine
+- Implemented roadmap sync to ensure documentation stays up-to-date with platform developments
+- Created a full Confluence mirror within the doc-engine for easier collaboration and reference
 
 ### Key Decisions
-- Chose to integrate the doc-engine directly with our Confluence instance to reduce data duplication and increase team efficiency
-- Decided to utilize the existing GitHub Actions workflow to automate documentation updates, ensuring consistency and reliability
+- Chose to prioritize the intelligence pipeline integration over other features to enhance the overall documentation quality and relevance
+- Decided to use Confluence as a mirror due to its widespread adoption and ease of use among team members
 
 ### Issues Encountered
-- Initially, the intelligence pipeline was not syncing correctly with the roadmap, resulting in outdated documentation; resolving this required modifying the pipeline configuration to better handle concurrent updates
-- The Confluence mirror setup was more complex than anticipated, necessitating additional configuration tweaks to ensure accurate and timely document reflection
+- Initial integration attempts resulted in data inconsistencies due to mismatched formats; resolved by adding a data normalization step
+- Had to troubleshoot permissions issues for the Confluence mirror, which required adjusting the API access settings
+
+### Documentation Updates
+- Updated the doc-engine README to reflect the new integration and features
+- Added a troubleshooting section for common issues encountered during the integration process
 
 ### Next Session
-- Plan to explore further automation possibilities using the doc-engine, potentially integrating it with our incident management system
-- Investigate using the doc-engine to generate automated release notes based on GitHub commit history and milestone achievements
+- Plan to focus on enhancing the automation aspects of the doc-engine, exploring the use of GitHub Actions for workflow optimization
+- Investigate potential integrations with other tools to further enrich the documentation experience
