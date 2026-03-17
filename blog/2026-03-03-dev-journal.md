@@ -2,12 +2,7 @@
 slug: dev-journal-2026-03-03
 title: Day 9: When Atlassian Auth Got in the Way
 authors: [ananga]
-tags:
-  - github
-  - confluence
-  - atlassian
-  - oauth
-  - api
+tags: [github, confluence, atlassian, oauth, api]
 date: 2026-03-03
 ---
 Today was supposed to be a smooth ride, getting the journal publishing on Confluence figured out, but it turned into a battle with Atlassian's auth system that I didn't see coming.
