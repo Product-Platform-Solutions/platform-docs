@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-02-28
-title: Day 5: Forging the Doc-Engine from Scratch
+title: "Day 5: Forging the Doc-Engine from Scratch"
 authors: [ananga]
 tags: [github, doc-engine, docusaurus, groq, github-actions, automation, journal]
 date: 2026-02-28
