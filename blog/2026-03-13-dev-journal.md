@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-03-13
-title: Day 11: Rethinking Doc-Engine as a Game Changer
+title: "Day 11: Rethinking Doc-Engine as a Game Changer"
 authors: [ananga]
 tags: [github, doc-engine, docusaurus, cloudflare, oauth, automation]
 date: 2026-03-13
