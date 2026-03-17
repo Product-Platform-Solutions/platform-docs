@@ -1,26 +1,51 @@
 ---
-title: Dev Journal 2026-03-17
-tags: [doc-engine, confluence, atlassian, cloudflare, traefik, https, react, groq, github-actions, automation]
-authors: [ananga]
 slug: dev-journal-2026-03-17
+title: Day 12: Taming the Beast of Broken APIs and Shaping the Narrative
+authors: [ananga]
+tags:
+  - github
+  - groq
+  - react
+  - auto-tracker
+  - n8n
+  - github-actions
+  - automation
+  - doc-engine
+  - journal
+  - iam-platform
+  - ai-debug-agent
+  - platform-docs
+  - incident
+  - mfa
+  - scim
+  - ldap
+  - confluence
+  - docusaurus
+  - docker
+  - nginx
+  - pm2
+  - oauth
+  - cloudflare
+  - atlassian
+date: 2026-03-17
 ---
+I woke up to a slew of errors in our API logs, and after digging through the noise, I found the culprit: our express.json middleware was missing, silently dropping request bodies like a stealthy ninja. 
+<!-- truncate -->
+I started my day with a sense of unease, knowing that the issues I was about to tackle would require a mix of technical expertise, persistence, and a dash of creativity. The first order of business was to tackle the express.json middleware problem that had been plaguing our manual API calls. It was as if the request bodies were disappearing into thin air, leaving us with a puzzling lack of data on the backend. I dove headfirst into the code, scouring every line of our index.js file for any signs of the missing middleware.
 
-Today was a long and winding road, full of twists and turns, as I delved deeper into getting our docs project to industry grade. The day started with a sobering assessment of our live docs site, which I accessed via a Cloudflare tunnel. I have to admit, I was a bit disappointed with the state of our journal entries, particularly Day 11, which read like a dry bullet-point report. Where was the story? Where was the struggle? I remembered that day vividly - a 2-hour fight with Atlassian's external user permissions, service account OAuth complexity, and token rotation going wrong. None of that made it into the journal, and that's what I aimed to change today.
+After what felt like an eternity, I finally found the issue: the express.json middleware was simply not included in the file. It was a straightforward fix, but one that required a meticulous eye for detail. I added the necessary line of code, `app.use(express.json());`, and immediately tested the API calls to see if the issue was resolved. To my relief, the request bodies were now being parsed correctly, and the API was functioning as expected.
 
-First things first, I decided to tackle the Confluence auth issue again. I created a new service account, `doc-engine-t1s14wo7lg@serviceaccount.atlassian.com`, and generated a scoped API token with all the necessary Confluence permissions. I added the service account as a Collaborator in our PPS Confluence space, feeling pretty confident that this would finally work. But, as I started making API calls, I was hit with a frustrating 403 error every time. I tried using Basic auth, then switched to a Bearer token, but the result was the same. It wasn't until I dug deeper that I realized the scoped service account tokens use OAuth 2.0 client credentials flow, which is a whole different ball game. That's a 2-3 hour implementation, involving registering an OAuth app, client_id/secret exchange, and hourly token refresh. I reluctantly decided to defer this to Phase 2.3 on our roadmap. Sometimes, it's necessary to know when to fold 'em.
+With the express.json middleware issue behind me, I turned my attention to the journal narrative prompt. I had been struggling to get the format just right, with the truncate placement, title format, and date field all requiring adjustments. It was a painstaking process, but one that was necessary to ensure that our journal entries were consistent and easy to follow. I spent a good chunk of time tweaking the frontmatter fields, making sure that the slug, title, authors, tags, and date were all in the correct format.
 
-I rotated back to using my personal token, which, to my surprise, had also stopped working. It turns out that my external user account status was blocking the REST API, even though I could access Confluence just fine through the browser. This was an Atlassian identity configuration issue that I couldn't fix without either a custom domain to verify or OAuth 2.0 properly implemented. I was starting to feel like I was trapped in some kind of authentication Groundhog Day.
+As I worked on the journal narrative prompt, I couldn't help but think about the importance of storytelling in our development process. The journal entries were not just a record of our progress, but a way to share our experiences, successes, and failures with the community. By getting the format right, I was helping to create a narrative that would be engaging, informative, and relatable to our readers.
 
-On a more positive note, I fixed the homepage footer, which still had an old IP address listed in the platform links. It was a small win, but it was something. I then dove into a thorough review of what "industry grade" actually means for our doc-engine project. The conclusion I came to was that it's genuinely novel - there's no equivalent out there in the market. Swimm is the closest, but it's expensive, narrow, and doesn't do narrative, journal, or changelog. I spent some time creating a full industry roadmap document, covering 4 phases and 17 milestones. It was a useful exercise, as it helped me clarify our goals and what we need to achieve.
+After fixing the journal narrative prompt, I decided to upgrade our Groq model to the llama-3.3-70b-versatile version. I had been experimenting with different models, and this one promised better writing quality and more nuanced language understanding. The upgrade process was relatively smooth, with the new model requiring only a few tweaks to our existing code. I was excited to see how the new model would perform, and whether it would live up to its promises.
 
-The rest of the day was spent discussing domain options. I tried to get `is-a.dev` approved, but the PR got rejected because it wasn't dev-related enough. I then turned to Cloudflare Tunnel, which I set up and ran into a redirect loop with Traefik. After some tweaking, I fixed the issue by exposing `iam-docs` on port 8080 directly and pointing the tunnel there. Our docs site is now publicly accessible at `tent-edt-intervals-setup.trycloudflare.com`. We discussed buying a real domain, with Porkbun being the cheapest option at $9.73/year for a `.dev` domain. For now, we've decided to use the temporary tunnel, and we'll buy a real domain when doc-engine goes public.
+As the day wore on, I found myself reflecting on the decisions I had made and the tradeoffs that came with them. I had chosen to focus on the express.json middleware issue first, knowing that it was a critical problem that needed to be solved. But in doing so, I had to put other tasks on the backburner, at least temporarily. It was a reminder that prioritization is a key part of the development process, and that sometimes, it's necessary to make tough choices about what to focus on and when.
 
-One of the most frustrating issues I faced today was discovering why our journals were being skipped. It turned out that the `express.json()` middleware was missing from `index.js`, which meant that request bodies were never parsed. As a result, our session notes were arriving as empty strings. I fixed this by adding `app.use(express.json())` before route mounting. I also rewrote the journal prompt completely, switching from a bullet-point status report format to a full narrative, 800-1200 word engineering story. I even switched the Groq model from `llama-3.1-8b-instant` to `llama-3.3-70b-versatile`, which has resulted in much better writing quality.
+I also thought about the tools and technologies that I had used throughout the day. From the express.json middleware to the Groq model, each one had played a crucial role in solving the problems at hand. It was a testament to the power of technology and the importance of staying up-to-date with the latest developments in the field.
 
-As I look back on the day, I'm struck by the amount of time I spent on authentication issues. It's amazing how something that seems so simple can turn into a quagmire of complexity. But, despite the frustrations, I feel like we've made some real progress today. We've got a clearer roadmap, a better understanding of what industry grade means, and a solid plan for moving forward.
+As I looked back on the day's events, I realized that it had been a day of small wins, but significant ones nonetheless. I had fixed a critical issue with our API, improved the journal narrative prompt, and upgraded our Groq model. Each of these tasks had required attention to detail, persistence, and a willingness to learn and adapt.
 
-Looking ahead to tomorrow, I'm excited to dive back into the doc-engine project with renewed energy and focus. We've still got a lot of work to do, but I'm confident that we're on the right track. One thing that's still on my mind is the Confluence auth issue - I know we've deferred it to Phase 2.3, but I'm not sure if that's the right decision. Should we be prioritizing this more highly? I'm not sure, but it's definitely something I'll be thinking about in the coming days.
-
-Today was a long and winding road, but it was also a day of discovery, growth, and progress. As I sign off, I'm feeling tired but satisfied, knowing that we're one step closer to making our doc-engine project a reality. 
-<!-- truncate --> 
-Today I finally tackled the long-standing Confluence auth issue and made significant progress on the doc-engine project.
+## What's Next
+As I closed out the day, I couldn't help but think about what lay ahead. I still had a number of tasks to complete, from refining our API documentation to exploring new features and functionalities. But for now, I was content to reflect on the day's accomplishments and look forward to the challenges that tomorrow would bring. The journey of building the Product Platform Solutions was not an easy one, but it was a rewarding one, and I was excited to see where it would take me next. With the express.json middleware issue resolved, the journal narrative prompt improved, and the Groq model upgraded, I was ready to tackle whatever came next.
