@@ -19,7 +19,7 @@ title: "Session 4 - Docs, MFA & AI Debug"
 
 - Docusaurus 3.9.2
 - Auto-deploy via GitHub Actions on every push
-- Live at https://docs.3.25.125.195.sslip.io
+- Live at https://docs.15.134.72.92.sslip.io
 
 ### Issues During Setup
 - Default sample blog posts referenced unknown author key → delete sample content

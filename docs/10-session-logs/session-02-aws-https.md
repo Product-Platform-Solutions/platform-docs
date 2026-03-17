@@ -16,7 +16,7 @@ Codespaces port visibility permanently locked under org plan. OAuth/OIDC flows r
 
 - Instance: t3.micro (free tier)
 - OS: Ubuntu 24.04 LTS
-- IP: 3.25.125.195
+- IP: 15.134.72.92
 - Storage: 30GB SSD
 
 ### Why Not Oracle Cloud
@@ -86,10 +86,10 @@ User visits app → Keycloak JS initializes → redirect to login
 
 | Service | URL |
 |---------|-----|
-| React App | https://app.3.25.125.195.sslip.io |
-| Keycloak | https://keycloak.3.25.125.195.sslip.io |
-| n8n | https://n8n.3.25.125.195.sslip.io |
-| Docs | https://docs.3.25.125.195.sslip.io |
+| React App | https://app.15.134.72.92.sslip.io |
+| Keycloak | https://keycloak.15.134.72.92.sslip.io |
+| n8n | https://n8n.15.134.72.92.sslip.io |
+| Docs | https://docs.15.134.72.92.sslip.io |
 
 ---
 

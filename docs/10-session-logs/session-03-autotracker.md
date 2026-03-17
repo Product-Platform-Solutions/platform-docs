@@ -21,7 +21,7 @@ Complete automated ticket tracking system. Every git push automatically creates 
 
 ## n8n Deployment
 
-Self-hosted workflow automation (like Zapier but free). Added to Docker Compose, live at https://n8n.3.25.125.195.sslip.io
+Self-hosted workflow automation (like Zapier but free). Added to Docker Compose, live at https://n8n.15.134.72.92.sslip.io
 
 ---
 
@@ -98,7 +98,7 @@ Survives server reboots.
 
 Fires on every push, sends event to auto-tracker API.
 
-Secret TRACKER_API_URL = http://3.25.125.195:3001/events/github
+Secret TRACKER_API_URL = http://15.134.72.92:3001/events/github
 
 ---
 

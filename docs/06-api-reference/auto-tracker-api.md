@@ -7,7 +7,7 @@ title: Auto-Tracker API
 
 ## Base URL
 ```
-http://3.25.125.195:3001
+http://15.134.72.92:3001
 ```
 
 ## Endpoints

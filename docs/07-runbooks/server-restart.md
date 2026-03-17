@@ -14,7 +14,7 @@ title: Server Restart Procedure
 
 ### 1. SSH into server
 ```bash
-ssh -i ~/Downloads/iam-platform-key.pem ubuntu@3.25.125.195
+ssh -i ~/Downloads/iam-platform-key.pem ubuntu@15.134.72.92
 ```
 
 ### 2. Check Docker services
@@ -43,19 +43,19 @@ pm2 save
 ### 4. Verify all endpoints
 ```bash
 curl -s http://localhost:3001/health
-curl -sk https://keycloak.3.25.125.195.sslip.io/health/ready
-curl -sk https://app.3.25.125.195.sslip.io | head -3
+curl -sk https://keycloak.15.134.72.92.sslip.io/health/ready
+curl -sk https://app.15.134.72.92.sslip.io | head -3
 ```
 
 ### 5. Check Keycloak realm
 If iam-platform realm is missing after restart:
 ```bash
-TOKEN=$(curl -s -k -X POST "https://keycloak.3.25.125.195.sslip.io/realms/master/protocol/openid-connect/token" \
+TOKEN=$(curl -s -k -X POST "https://keycloak.15.134.72.92.sslip.io/realms/master/protocol/openid-connect/token" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=admin&password=admin_secret&grant_type=password&client_id=admin-cli" \
   | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
 
-curl -s -k -X POST "https://keycloak.3.25.125.195.sslip.io/admin/realms" \
+curl -s -k -X POST "https://keycloak.15.134.72.92.sslip.io/admin/realms" \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
   -d @/home/ubuntu/iam-platform/iam/keycloak/realms/iam-platform-realm.json

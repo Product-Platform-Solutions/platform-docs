@@ -35,19 +35,19 @@ Traefik (Reverse Proxy + TLS Termination)
 
 | Service | URL | Purpose |
 |---------|-----|---------|
-| React App | https://app.3.25.125.195.sslip.io | Frontend |
-| Keycloak | https://keycloak.3.25.125.195.sslip.io | IAM Admin |
-| n8n | https://n8n.3.25.125.195.sslip.io | Automation |
-| Docs | https://docs.3.25.125.195.sslip.io | Documentation |
-| Auto-tracker API | http://3.25.125.195:3001 | Ticket API |
+| React App | https://app.15.134.72.92.sslip.io | Frontend |
+| Keycloak | https://keycloak.15.134.72.92.sslip.io | IAM Admin |
+| n8n | https://n8n.15.134.72.92.sslip.io | Automation |
+| Docs | https://docs.15.134.72.92.sslip.io | Documentation |
+| Auto-tracker API | http://15.134.72.92:3001 | Ticket API |
 
 ## Authentication Flow
 ```
-User visits app.3.25.125.195.sslip.io
+User visits app.15.134.72.92.sslip.io
     ↓
 React app initializes Keycloak JS
     ↓
-Redirect to keycloak.3.25.125.195.sslip.io/realms/iam-platform
+Redirect to keycloak.15.134.72.92.sslip.io/realms/iam-platform
     ↓
 User enters credentials
     ↓

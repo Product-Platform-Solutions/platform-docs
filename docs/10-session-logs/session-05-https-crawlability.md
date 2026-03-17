@@ -76,18 +76,18 @@ location /raw/ {
 
 Every doc is now accessible as plain text:
 ```
-https://docs.3.25.125.195.sslip.io/raw/00-project-overview/context.txt
-https://docs.3.25.125.195.sslip.io/raw/00-project-overview/vision.txt
-https://docs.3.25.125.195.sslip.io/raw/00-project-overview/roadmap.txt
+https://docs.15.134.72.92.sslip.io/raw/00-project-overview/context.txt
+https://docs.15.134.72.92.sslip.io/raw/00-project-overview/vision.txt
+https://docs.15.134.72.92.sslip.io/raw/00-project-overview/roadmap.txt
 ```
 
 ### How to Start Any New Session
 Paste these URLs directly into a new chat:
 
 > Please fetch these 3 URLs as context before we continue:
-> - https://docs.3.25.125.195.sslip.io/raw/00-project-overview/context.txt
-> - https://docs.3.25.125.195.sslip.io/raw/00-project-overview/vision.txt
-> - https://docs.3.25.125.195.sslip.io/raw/00-project-overview/roadmap.txt
+> - https://docs.15.134.72.92.sslip.io/raw/00-project-overview/context.txt
+> - https://docs.15.134.72.92.sslip.io/raw/00-project-overview/vision.txt
+> - https://docs.15.134.72.92.sslip.io/raw/00-project-overview/roadmap.txt
 
 The AI fetches them, reads full context, and continues exactly where we left off. No pasting. No re-explaining. No lost context.
 

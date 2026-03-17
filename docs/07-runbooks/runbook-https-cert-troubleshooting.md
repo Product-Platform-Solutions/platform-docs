@@ -63,7 +63,7 @@ docker restart iam-traefik
 ```bash
 docker restart iam-traefik
 sleep 15
-curl -s https://docs.3.25.125.195.sslip.io | head -3
+curl -s https://docs.15.134.72.92.sslip.io | head -3
 ```
 
 ---
@@ -71,10 +71,10 @@ curl -s https://docs.3.25.125.195.sslip.io | head -3
 ## Verification Commands
 ```bash
 # Check if cert is trusted (no -k flag)
-curl -s https://docs.3.25.125.195.sslip.io | head -3
+curl -s https://docs.15.134.72.92.sslip.io | head -3
 
 # Check cert details
-curl -sv https://docs.3.25.125.195.sslip.io 2>&1 | grep -E "issuer|subject|SSL|certificate"
+curl -sv https://docs.15.134.72.92.sslip.io 2>&1 | grep -E "issuer|subject|SSL|certificate"
 
 # Check Traefik logs
 docker logs iam-traefik --tail 30
@@ -86,7 +86,7 @@ docker exec iam-traefik wget -q -O- http://localhost:8080/api/rawdata 2>/dev/nul
 docker exec iam-traefik cat /letsencrypt/acme.json | python3 -m json.tool | grep "main"
 
 # Check port 80 is reachable (required for HTTP challenge)
-curl -v http://3.25.125.195/.well-known/acme-challenge/test 2>&1 | grep -E "Connected|HTTP"
+curl -v http://15.134.72.92/.well-known/acme-challenge/test 2>&1 | grep -E "Connected|HTTP"
 ```
 
 ---
@@ -116,16 +116,16 @@ docker compose up -d
 sleep 15
 
 # 7. Trigger cert issuance by hitting all domains
-curl -k https://app.3.25.125.195.sslip.io > /dev/null 2>&1
-curl -k https://keycloak.3.25.125.195.sslip.io > /dev/null 2>&1
-curl -k https://docs.3.25.125.195.sslip.io > /dev/null 2>&1
-curl -k https://n8n.3.25.125.195.sslip.io > /dev/null 2>&1
+curl -k https://app.15.134.72.92.sslip.io > /dev/null 2>&1
+curl -k https://keycloak.15.134.72.92.sslip.io > /dev/null 2>&1
+curl -k https://docs.15.134.72.92.sslip.io > /dev/null 2>&1
+curl -k https://n8n.15.134.72.92.sslip.io > /dev/null 2>&1
 
 # 8. Wait for certs to issue
 sleep 60
 
 # 9. Verify
-curl -s https://docs.3.25.125.195.sslip.io | head -3
+curl -s https://docs.15.134.72.92.sslip.io | head -3
 ```
 
 ---
