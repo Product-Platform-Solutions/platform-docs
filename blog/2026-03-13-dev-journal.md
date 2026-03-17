@@ -1,0 +1,34 @@
+---
+slug: dev-journal-2026-03-13
+title: Day 11: Rethinking Doc-Engine as a Game Changer
+authors: [ananga]
+tags:
+  - github
+  - doc-engine
+  - docusaurus
+  - cloudflare
+  - oauth
+  - automation
+date: 2026-03-13
+---
+I just spent the last 12 hours rethinking everything I thought I knew about doc-engine, and I'm more convinced than ever that we're onto something revolutionary. 
+<!-- truncate -->
+As I sat down at my desk this morning, I knew I had a big task ahead of me. I had been putting off a thorough assessment of what it means for doc-engine to be "industry grade" for too long. I mean, what does that even mean? Is it just a buzzword, or is there real substance behind it? I decided to start by reading through the live docs site, but this time, I did it through the Cloudflare tunnel. I wanted to experience it as a real user would, with all the bells and whistles that come with a production-ready setup.
+
+As I scrolled through the pages, I was struck by how... boring it all seemed. The journal entries, in particular, were dry and lacking in depth. I realized that I had been prioritizing getting the technical aspects right over telling the actual story of what was happening. It was all bullet points and generic language, with none of the messy details that make a story worth reading. I thought back to all the times I'd struggled with a particular problem, only to have it click into place after hours of frustration. Where were those stories? Where was the narrative of how doc-engine was coming to life?
+
+This train of thought led me to start researching competitors in the market. I looked at Swimm, which is probably the closest thing to what we're building. But as I dug deeper, I realized that Swimm is really only focused on inline code docs, and it doesn't do narrative journals or changelogs. And let's be real, the pricing is out of this world – it's definitely an enterprise-only solution. I started to feel a sense of excitement and purpose. What we're building with doc-engine is genuinely novel. We're talking about an autonomous documentation agent that treats documentation as a continuous output of engineering work. That's a game changer.
+
+With this newfound sense of purpose, I dove headfirst into building a full industry roadmap document. I wanted to map out the entire journey, from where we are now to where we want to be in the future. I broke it down into four phases, each with its own set of milestones. Phase 1 is all about foundation, and I'm happy to say that we've already completed that. Phase 2 is where things start to get really interesting – we're talking about discoverability and quality. That means getting a real domain set up, implementing Algolia search, and adding OAuth support. We'll also be focusing on rich journals and doc health, which will make our documentation truly shine.
+
+As I worked on the roadmap, I started to think about the authentication strategy for doc-engine. Right now, we're using personal tokens, but I know that's not sustainable in the long term. We need to move to a service account model, and eventually, we'll need to support OAuth 2.0 client credentials for multi-tenant SaaS. And let's not forget about token vaults for enterprise customers – that's a whole other can of worms. But I'm excited about the challenge. I love solving complex problems, and this is definitely one of them.
+
+The vision for doc-engine is simple: we want to make it easy for any team, using any stack, to have amazing documentation. We want to get to a point where all you have to do is run `doc-engine init`, answer a few questions, and you're off and running. No more manual overhead, no more boring documentation. That's the dream, at least.
+
+As the day drew to a close, I took a break to look at some of the GitHub activity from the past day. I saw that I'd made a few commits to doc-engine, including one that fixed the journal prompt and another that updated the express.json middleware. It's funny – sometimes it's the small wins that make the biggest difference. In this case, getting the journal prompt right meant that our narrative journals would finally start to shine.
+
+I also spent some time thinking about the future of doc-engine. What does it mean for us to be "industry grade"? Is it just about checking off a list of features, or is it something more? I think it's the latter. I think it's about creating a tool that truly makes a difference in people's lives. It's about making documentation something that's enjoyable to read and write, rather than a chore.
+
+As I look back on the day's events, I'm struck by how much we've accomplished. We've got a clear roadmap, a solid plan for authentication, and a vision that's truly exciting. And yet, despite all the progress we've made, I know that we're just getting started. There are still so many challenges to overcome, so many problems to solve. But I'm ready for it. I'm ready to dive in, to get my hands dirty, and to make doc-engine the best it can be.
+
+So what's next? Tomorrow, I'll be diving back into the code, working on implementing some of the features we've outlined in our roadmap. I'll be focusing on getting the real domain set up, as well as implementing Algolia search. It won't be easy, but I'm excited about the challenge. And as for open questions, I've got a few. How will we handle token vaults for enterprise customers? What does our support model look like? And how will we make sure that our documentation stays up to date and relevant? These are all questions that I'll be thinking about in the coming days and weeks. But for now, I'm just going to take a deep breath, relax, and enjoy the feeling of having made some real progress. Today was a good day.
