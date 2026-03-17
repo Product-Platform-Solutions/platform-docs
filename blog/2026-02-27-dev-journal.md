@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-02-27
-title: Day 4: Taming the AI Fetcher Beast
+title: "Day 4: Taming the AI Fetcher Beast"
 authors: [ananga]
 tags: [github, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, docker, nginx, ai-debug-agent]
 date: 2026-02-27
