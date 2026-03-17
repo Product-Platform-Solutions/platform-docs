@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-03-02
-title: Day 8: The IP Address Migration Nightmare
+title: "Day 8: The IP Address Migration Nightmare"
 authors: [ananga]
 tags: [github, keycloak, setup, aws, traefik, https, docker, nginx]
 date: 2026-03-02
