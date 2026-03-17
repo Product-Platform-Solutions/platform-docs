@@ -2,31 +2,7 @@
 slug: dev-journal-2026-03-17
 title: Day 12: Taming the Beast of Broken APIs and Shaping the Narrative
 authors: [ananga]
-tags:
-  - github
-  - groq
-  - react
-  - auto-tracker
-  - n8n
-  - github-actions
-  - automation
-  - doc-engine
-  - journal
-  - iam-platform
-  - ai-debug-agent
-  - platform-docs
-  - incident
-  - mfa
-  - scim
-  - ldap
-  - confluence
-  - docusaurus
-  - docker
-  - nginx
-  - pm2
-  - oauth
-  - cloudflare
-  - atlassian
+tags: [github, groq, react, auto-tracker, n8n, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, mfa, scim, ldap, confluence, docusaurus, docker, nginx, pm2, oauth, cloudflare, atlassian]
 date: 2026-03-17
 ---
 I woke up to a slew of errors in our API logs, and after digging through the noise, I found the culprit: our express.json middleware was missing, silently dropping request bodies like a stealthy ninja. 
