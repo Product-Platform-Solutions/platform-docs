@@ -2,28 +2,7 @@
 slug: dev-journal-2026-03-17
 title: Day 7: The Intelligence Pipeline That Almost Worked
 authors: [ananga]
-tags:
-  - github
-  - groq
-  - setup
-  - react
-  - auto-tracker
-  - n8n
-  - groq
-  - github-actions
-  - automation
-  - doc-engine
-  - journal
-  - iam-platform
-  - ai-debug-agent
-  - platform-docs
-  - incident
-  - confluence
-  - docusaurus
-  - docker
-  - nginx
-  - pm2
-  - oauth
+tags: [github, groq, setup, react, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, confluence, docusaurus, docker, nginx, pm2, oauth]
 ---
 I spent the entire day building the intelligence pipeline for the doc-engine, and while it mostly works, the one failure that's still haunting me is the fact that index.md can't set itself as its own parent page on Confluence - a quirk that has me questioning the very fabric of our documentation system.
 <!-- truncate -->
