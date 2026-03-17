@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-03-12
-title: Day 10: Breaking Out of the IP Address Jail
+title: "Day 10: Breaking Out of the IP Address Jail"
 authors: [ananga]
 tags: [github, cloudflare, traefik, https, docker, nginx, pm2, domain]
 date: 2026-03-12
