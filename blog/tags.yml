@@ -6,6 +6,7 @@ setup:
   label: Setup
 aws:
   label: AWS
+  permalink: /aws
 traefik:
   label: Traefik
 https:
@@ -40,51 +41,36 @@ scim:
   label: SCIM
 ldap:
   label: LDAP
-
 confluence:
   label: Confluence
   permalink: /confluence
-
 atlassian:
   label: Atlassian
   permalink: /atlassian
-
 cloudflare:
   label: Cloudflare
   permalink: /cloudflare
-
 docker:
   label: Docker
   permalink: /docker
-
 nginx:
   label: Nginx
   permalink: /nginx
-
 pm2:
   label: PM2
   permalink: /pm2
-
 oauth:
   label: OAuth
   permalink: /oauth
-
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
-
 api:
   label: API
   permalink: /api
-
 domain:
   label: Domain
   permalink: /domain
-
-aws:
-  label: AWS
-  permalink: /aws
-
 ec2:
   label: EC2
   permalink: /ec2
