@@ -40,3 +40,31 @@ scim:
   label: SCIM
 ldap:
   label: LDAP
+
+confluence:
+  label: Confluence
+  permalink: /confluence
+
+atlassian:
+  label: Atlassian
+  permalink: /atlassian
+
+cloudflare:
+  label: Cloudflare
+  permalink: /cloudflare
+
+docker:
+  label: Docker
+  permalink: /docker
+
+nginx:
+  label: Nginx
+  permalink: /nginx
+
+pm2:
+  label: PM2
+  permalink: /pm2
+
+oauth:
+  label: OAuth
+  permalink: /oauth
