@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-03-17
-title: Day 12: Taming the Beast of Broken APIs and Shaping the Narrative
+title: "Day 12: Taming the Beast of Broken APIs and Shaping the Narrative"
 authors: [ananga]
 tags: [github, groq, react, auto-tracker, n8n, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, mfa, scim, ldap, confluence, docusaurus, docker, nginx, pm2, oauth, cloudflare, atlassian]
 date: 2026-03-17
