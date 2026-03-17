@@ -2,14 +2,7 @@
 slug: dev-journal-2026-02-28
 title: Day 5: Forging the Doc-Engine from Scratch
 authors: [ananga]
-tags:
-  - github
-  - doc-engine
-  - docusaurus
-  - groq
-  - github-actions
-  - automation
-  - journal
+tags: [github, doc-engine, docusaurus, groq, github-actions, automation, journal]
 date: 2026-02-28
 ---
 I just spent the last 12 hours building the doc-engine from the ground up, and it's finally alive, auto-generating journals, changelogs, and incident reports from GitHub activity.
