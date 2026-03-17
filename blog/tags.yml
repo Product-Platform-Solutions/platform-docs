@@ -68,3 +68,23 @@ pm2:
 oauth:
   label: OAuth
   permalink: /oauth
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+
+api:
+  label: API
+  permalink: /api
+
+domain:
+  label: Domain
+  permalink: /domain
+
+aws:
+  label: AWS
+  permalink: /aws
+
+ec2:
+  label: EC2
+  permalink: /ec2
