@@ -1,6 +1,6 @@
 ---
 slug: dev-journal-2026-03-17
-title: Day 7: The Intelligence Pipeline That Almost Worked
+title: "Day 7: The Intelligence Pipeline That Almost Worked"
 authors: [ananga]
 tags: [github, groq, setup, react, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, confluence, docusaurus, docker, nginx, pm2, oauth]
 ---
