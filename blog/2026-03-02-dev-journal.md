@@ -2,15 +2,7 @@
 slug: dev-journal-2026-03-02
 title: Day 8: The IP Address Migration Nightmare
 authors: [ananga]
-tags:
-  - github
-  - keycloak
-  - setup
-  - aws
-  - traefik
-  - https
-  - docker
-  - nginx
+tags: [github, keycloak, setup, aws, traefik, https, docker, nginx]
 date: 2026-03-02
 ---
 I just spent the entire day dealing with the aftermath of a simple EC2 instance restart, a painful IP address migration that broke everything from SSH to GitHub webhooks. 
