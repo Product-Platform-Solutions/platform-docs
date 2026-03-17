@@ -2,18 +2,7 @@
 slug: dev-journal-2026-02-27
 title: Day 4: Taming the AI Fetcher Beast
 authors: [ananga]
-tags:
-  - github
-  - auto-tracker
-  - n8n
-  - groq
-  - github-actions
-  - automation
-  - doc-engine
-  - journal
-  - docker
-  - nginx
-  - ai-debug-agent
+tags: [github, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, docker, nginx, ai-debug-agent]
 date: 2026-02-27
 ---
 I started the day with a sinking feeling, knowing I had to tackle the AI fetcher compatibility issues that had been plaguing me for days, and it wasn't until I dug deep into the HTTP headers that the solution finally revealed itself. 
