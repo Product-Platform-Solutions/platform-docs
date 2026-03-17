@@ -2,7 +2,8 @@
 slug: dev-journal-2026-03-17
 title: "Day 13: Refactoring the Docs Engine and Resurrecting the Journal"
 authors: [ananga]
-tags: [- github, keycloak, setup, aws, traefik, https, react, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, mfa, scim, ldap, confluence, docusaurus, docker, nginx, pm2, oauth, cloudflare, atlassian]
+tags: [github, keycloak, setup, aws, traefik, https, react, auto-tracker, n8n, groq, github-actions, automation, doc-engine, journal, iam-platform, ai-debug-agent, platform-docs, incident, mfa, scim, ldap, confluence, docusaurus, docker, nginx, pm2, oauth, cloudflare, atlassian]
+date: 2026-03-17
 ---
 I began the day with a daunting task: a major quality and completeness session for the docs project, and it quickly became apparent that my journal quality was in dire need of a overhaul. As I reviewed the live docs site via Cloudflare tunnel, I realized that my Day 11 entry read like a bullet point status report, lacking the narrative depth I strived for. 
 <!-- truncate -->
