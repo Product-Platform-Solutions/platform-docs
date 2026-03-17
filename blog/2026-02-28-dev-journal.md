@@ -1,40 +1,33 @@
 ---
 slug: dev-journal-2026-02-28
-title: Day 13: Taming the Doc Engine Beast
+title: Day 5: Forging the Doc-Engine from Scratch
 authors: [ananga]
 tags:
   - github
-  - groq
   - doc-engine
   - docusaurus
+  - groq
   - github-actions
+  - automation
+  - journal
 date: 2026-02-28
 ---
-
-As I sat down at my desk, I knew I had a long day ahead of me - I was determined to get the doc-engine up and running, and I wasn't leaving until it was writing journals like a pro. 
+I just spent the last 12 hours building the doc-engine from the ground up, and it's finally alive, auto-generating journals, changelogs, and incident reports from GitHub activity.
 <!-- truncate -->
-I'd been thinking about this day for weeks, ever since I first conceived of the idea for a self-writing documentation system. The goal was ambitious: build a service that could auto-generate journals, changelogs, and incident reports from GitHub activity. I'd started by reading through the context, vision, and roadmap files from the docs site, trying to get a sense of what I needed to build. But today was the day I'd finally start coding.
+As I sat down at my desk this morning, I knew I had a daunting task ahead of me: building the doc-engine from scratch. The goal was ambitious - create a service that could auto-generate journals, changelogs, and incident reports from GitHub activity. I started by reading through the context, vision, and roadmap files to get a solid understanding of what needed to be done. The vision was clear: a Node.js service that could listen to GitHub push events, fire off a cron scheduler daily at 23:55 UTC for the journal, and provide manual REST API endpoints for other types of documentation. The Groq API would be used to generate the markdown content, and Docusaurus would auto-deploy the changes on push.
 
-I started by setting up a new Node.js project and installing the necessary dependencies. I knew I'd need a webhook trigger to listen to GitHub push events, a cron scheduler to fire daily at 23:55 UTC to write the journal, and some manual REST API endpoints for triggering writes. I also wanted to integrate with the ai-debug-agent for incident reports, and use the Groq API to generate the actual markdown content. Easy enough, right?
+I dove headfirst into the project, setting up a new Node.js project and installing the necessary dependencies. I chose to use Express.js as the framework, given its simplicity and flexibility. As I began to build out the webhook trigger, I realized that I needed to choose a port for the service to listen on. I defaulted to port 3001, but quickly ran into an issue - it was already taken by the auto-tracker service. I scratched my head, wondering why I hadn't checked for port availability sooner. A quick switch to port 3002 resolved the issue, but it was a frustrating start to the day.
 
-The first few hours were a blur of coding and debugging. I got the webhook trigger set up and tested, and then moved on to implementing the cron scheduler. But as I was testing the scheduler, I realized that I had a problem - port 3001 was already taken by the auto-tracker service. I grumbled to myself as I changed the port to 3002, wondering why I hadn't checked for conflicts earlier.
+With the webhook trigger in place, I moved on to setting up the cron scheduler. I used the `node-cron` package to schedule the daily journal run at 23:55 UTC. It was a straightforward process, but I had to double-check the timezone settings to ensure it would fire off at the correct time. Next, I built out the manual REST API endpoints for generating changelogs and incident reports. This involved creating API routes and handling requests and responses. I also integrated the ai-debug-agent trigger for incidents, which required some careful consideration of the API endpoints and request payloads.
 
-As I continued to code, I encountered another issue - the Groq model I was using, llama3-70b, was deprecated. I spent a frustrating hour trying to figure out why my API calls were failing, before finally discovering the problem and switching to the newer llama-3.3-70b-versatile model. It was a small setback, but it was starting to get under my skin.
+As I delved deeper into the project, I encountered another roadblock - the Groq model I was using had been deprecated. The `llama3-70b` model was no longer available, and I had to switch to the `llama-3.3-70b-versatile` model. It wasn't a significant change, but it required some tweaking of the API requests to accommodate the new model. I was starting to feel like I was hitting a new issue every hour, but I persisted, knowing that each problem was an opportunity to learn and improve.
 
-Despite the setbacks, I pushed on, determined to get the doc-engine working. I implemented the manual REST API endpoints and integrated with the ai-debug-agent, and then started testing the system end-to-end. But as I was testing, I realized that I'd made another mistake - I was committing to the wrong branch. Instead of committing to the develop branch, I was committing to main. I face-palmed, wondering how I could have been so careless.
+The next hurdle I faced was committing to the wrong branch. I had been working on the `develop` branch, but somehow, my commits were going to the `main` branch instead. I had to roll back the changes, switch to the correct branch, and re-commit. It was a tedious process, but I knew it was essential to maintain a clean and organized Git history. I also realized that I had been using frontmatter tags as a string instead of a YAML array. It was a simple mistake, but one that required some careful editing to resolve.
 
-As I fixed the branch issue, I also noticed that the frontmatter tags format was off. Instead of writing a YAML array, Groq was writing a string. I spent some time debugging the issue, and eventually figured out that I needed to modify the Groq API call to return the tags in the correct format.
+As the day wore on, I encountered more issues. I had been publishing the journal to the wrong directory - `docs/` instead of `blog/`. And, to make matters worse, the day numbering was based on the date instead of a sequential number. It was frustrating to see so many mistakes piling up, but I took a deep breath and tackled each one methodically. I added a `session_notes` field to the journal prompt, which allowed conversation content to drive the journal. It was a small but significant change, as it enabled the journal to be more dynamic and responsive to the needs of the project.
 
-Just when I thought I was making progress, I encountered another issue - the journal was being written to the wrong directory. Instead of being written to the blog/ directory, it was being written to the docs/ directory. I cursed my luck, wondering why this was happening. But as I dug deeper, I realized that it was a simple configuration issue - I just needed to update the GitHub API commit to write to the correct directory.
+As the sun began to set, I finally had a working doc-engine. I published the first automated journal entry, and it was a thrilling moment. All the struggles and setbacks were worth it - I had built something from scratch, and it was working as intended. I reflected on the day's events, thinking about what had gone well and what could be improved. I realized that I had been moving too quickly at times, and that a more measured approach might have avoided some of the issues I encountered.
 
-As the day wore on, I continued to debug and fix issues. I added a session_notes field to the journal trigger, so that conversation-based content could drive the journal instead of just GitHub commits. And I modified the day numbering to be sequential, instead of date-based. It was a small change, but it made a big difference in how the journal looked and felt.
+Despite the challenges, I was proud of what I had accomplished. The doc-engine was a significant addition to the platform, and it would save countless hours of manual documentation work. As I closed my laptop and leaned back in my chair, I felt a sense of satisfaction and relief. It had been a long and difficult day, but it had been worth it. Tomorrow would bring new challenges, but for now, I could bask in the glow of a job well done.
 
-Finally, after hours of coding and debugging, I got the first automated journal entry published successfully. It was a small victory, but it felt amazing. I'd tamed the doc-engine beast, and it was now writing journals like a pro.
-
-As I looked back on the day's work, I realized that it had been a wild ride. I'd encountered countless setbacks and issues, but I'd persevered and pushed through. And in the end, it had all been worth it - the doc-engine was up and running, and it was going to make my life so much easier.
-
-But as I packed up my things and headed home, I couldn't help but wonder what the next day would bring. Would the doc-engine continue to run smoothly, or would I encounter new issues and challenges? Only time would tell, but for now, I was just happy to have made it through the day with my sanity intact.
-
-As I drifted off to sleep that night, I couldn't help but feel a sense of pride and accomplishment. I'd built something truly amazing, and it was going to change the way I worked forever. The doc-engine was more than just a tool - it was a game-changer. And I couldn't wait to see what the future held. 
-
-The next day would bring new challenges, but for now, I was just going to bask in the glory of a job well done. The doc-engine was alive, and it was going to make my life so much easier. Bring on the next challenge, I'm ready.
+As I look to the next day, I know there's still much work to be done. The doc-engine needs to be tested and refined, and there are still many features to be added. But for now, I can take a moment to appreciate the progress I've made. The journey of building the Product Platform Solutions is a long one, but with each step, I'm getting closer to my goal. And as I drift off to sleep, I'm already thinking about what the next day will bring, and how I can continue to build and improve this platform.
