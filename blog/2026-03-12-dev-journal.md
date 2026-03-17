@@ -2,15 +2,7 @@
 slug: dev-journal-2026-03-12
 title: Day 10: Breaking Out of the IP Address Jail
 authors: [ananga]
-tags:
-  - github
-  - cloudflare
-  - traefik
-  - https
-  - docker
-  - nginx
-  - pm2
-  - domain
+tags: [github, cloudflare, traefik, https, docker, nginx, pm2, domain]
 date: 2026-03-12
 ---
 I spent the entire day trying to break the docs site out of its IP address jail, and I finally have a solution that doesn't make me cringe, even if it's not perfect.
